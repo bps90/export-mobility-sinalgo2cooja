@@ -1,5 +1,5 @@
 # export-mobility-sinalgo2cooja
-=====================================
+
 ## Descrição
 
 > Projeto para exportar trace de mobilidade dos nodos. O arquivo de trace serve de entrada para Cooja mobility plugin
