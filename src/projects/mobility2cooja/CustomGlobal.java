@@ -40,6 +40,7 @@ package projects.mobility2cooja;
 import javax.swing.JOptionPane;
 
 import sinalgo.runtime.AbstractCustomGlobal;
+import sinalgo.tools.logging.Logging;
 
 /**
  * This class holds customized global state and methods for the framework. 
@@ -63,6 +64,13 @@ import sinalgo.runtime.AbstractCustomGlobal;
  * added to the GUI. 
  */
 public class CustomGlobal extends AbstractCustomGlobal{
+	
+	public static Logging mobilityLogging = Logging.getLogger("mobilityLog.txt");
+	public static float max_percent_mob_nodes = 10;
+	public static float curr_num_mob_nodes = 0;
+	public static int num_trips = 0; //num trips that the mode may perform before return to home location 
+	public static float t_permance = 300; //Permanence time in each foreign location (s)
+	public static float start_t_shift = 0; //Shift from begginer of the simulation (s)
 	
 	/* (non-Javadoc)
 	 * @see runtime.AbstractCustomGlobal#hasTerminated()

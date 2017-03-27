@@ -41,6 +41,8 @@ package projects.mobility2cooja;
  * in the log-file. The levels below (with a higher enumeration value) not.
  */
 public class LogL extends sinalgo.tools.logging.LogL{
+	
+	public static final boolean mobilityLog = true;
 }
 
 
