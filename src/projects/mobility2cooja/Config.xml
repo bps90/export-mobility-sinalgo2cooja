@@ -240,6 +240,16 @@
 	<WaitingTime distribution="Poisson" lambda="10" />
 </RandomWayPoint>
 
+
+
+<OfficeMobility>
+	<Speed distribution="Constant" constant="1"/>
+	<PerMobNodes value="10"/>
+	<WaitingTime distribution="Constant" constant="60" />
+	<DistStops distribution="Constant" constant="3"/>
+	<SkippedTimeFromStart value="0"/>
+</OfficeMobility>
+
 <RandomDirection>
 	<NodeSpeed distribution="Gaussian" mean="10" variance="20" />
 	<WaitingTime distribution="Poisson" lambda="10" />

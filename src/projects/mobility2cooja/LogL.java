@@ -42,7 +42,7 @@ package projects.mobility2cooja;
  */
 public class LogL extends sinalgo.tools.logging.LogL{
 	
-	public static final boolean mobilityLog = true;
+	public static final boolean mobilityLog = false;
 }
 
 
