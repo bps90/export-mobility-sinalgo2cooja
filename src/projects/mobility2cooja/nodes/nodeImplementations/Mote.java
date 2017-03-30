@@ -3,6 +3,8 @@ package projects.mobility2cooja.nodes.nodeImplementations;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import projects.mobility2cooja.LogL;
+import projects.mobility2cooja.models.mobilityModels.OfficeMobility;
 import sinalgo.configuration.WrongConfigurationException;
 import sinalgo.gui.transformation.PositionTransformation;
 import sinalgo.nodes.Node;
@@ -30,6 +32,11 @@ public class Mote extends Node {
 	public void init() {
 		
 		homePosition.assign(this.getPosition());
+		if(OfficeMobility.mobilityLogging != null){
+			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, (this.ID - 1) + " ");
+			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, (Tools.getGlobalTime() + OfficeMobility.skippedTimeFromStart) + " ");
+			OfficeMobility.mobilityLogging.logln(LogL.mobilityLog, homePosition.xCoord + " " + homePosition.yCoord);
+		}
 		//Tools.appendToOutput("Node "+this.ID+" home "+homePosition.toString()+"\n");
 	}
 
