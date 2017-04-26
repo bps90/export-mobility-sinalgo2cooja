@@ -32,11 +32,18 @@ public class Mote extends Node {
 	public void init() {
 		
 		homePosition.assign(this.getPosition());
+		//Set initial position
+		if(OfficeMobility.mobilityLogging != null){
+			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, (this.ID - 1) + " ");
+			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, " 0 ");
+			OfficeMobility.mobilityLogging.logln(LogL.mobilityLog, homePosition.xCoord + " " + homePosition.yCoord);
+		}
+		/*
 		if(OfficeMobility.mobilityLogging != null){
 			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, (this.ID - 1) + " ");
 			OfficeMobility.mobilityLogging.log(LogL.mobilityLog, (Tools.getGlobalTime() + OfficeMobility.skippedTimeFromStart) + " ");
 			OfficeMobility.mobilityLogging.logln(LogL.mobilityLog, homePosition.xCoord + " " + homePosition.yCoord);
-		}
+		}*/
 		//Tools.appendToOutput("Node "+this.ID+" home "+homePosition.toString()+"\n");
 	}
 
