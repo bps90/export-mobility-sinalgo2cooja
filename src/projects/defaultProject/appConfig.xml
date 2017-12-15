@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sinalgo>
-	<ProjectSelector windowWidth="736" windowHeight="680" lastChosenProject="mobility2cooja" windowPosX="0" windowPosY="27" isMaximized="true" selectedTab="2" />
-	<GUI windowWidth="784" windowHeight="720" windowPosX="-1" windowPosY="27" isMaximized="true" ControlPanelExpandSimulation="true" ControlPanelShowFullViewPanel="false" ControlPanelShowTextPanel="true" ControlPanelShowProjectControl="true" RunOperationIsLimited="true" helpWindowWidth="500" helpWindowHeight="500" helpWindowPosX="200" helpWindowPosY="200" helpWindowIsMaximized="false" />
-	<RandomSeed seedFromPreviousRun="-8077118439691525704" />
-	<App lastSelectedFileDirectory="" checkForUpdatesAtStartup="false" updateCheckTimeStamp="0" runCmdLineArgs="" />
-	<GenNodesDlg numNodes="100" />
+	<ProjectSelector windowWidth="624" windowHeight="741" lastChosenProject="checkNodePos" windowPosX="-1" windowPosY="27" isMaximized="true" selectedTab="3" />
+	<GUI windowWidth="752" windowHeight="741" windowPosX="0" windowPosY="27" isMaximized="true" ControlPanelExpandSimulation="true" ControlPanelShowFullViewPanel="false" ControlPanelShowTextPanel="true" ControlPanelShowProjectControl="true" RunOperationIsLimited="true" helpWindowWidth="500" helpWindowHeight="500" helpWindowPosX="200" helpWindowPosY="200" helpWindowIsMaximized="false" />
+	<RandomSeed seedFromPreviousRun="-2978224042333415308" />
+	<App lastSelectedFileDirectory="/home/bruno/Dropbox/documentos/meus-artigos/mobile-matrix-journal-2018/grm100-dim-1000/" checkForUpdatesAtStartup="false" updateCheckTimeStamp="0" runCmdLineArgs="" />
+	<GenNodesDlg numNodes="49" />
 </sinalgo>
 

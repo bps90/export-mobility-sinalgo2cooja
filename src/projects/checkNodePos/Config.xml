@@ -8,10 +8,10 @@
 		<dimensions value="2" />
 
 		<!--Length of the deployment field along the x-axis.-->
-		<dimX value="400" />
+		<dimX value="1000" />
 
 		<!--Length of the deployment field along the y-axis.-->
-		<dimY value="400" />
+		<dimY value="1000" />
 
 		<!--Length of the deployment field along the z-axis.-->
 		<dimZ value="500" />
@@ -26,13 +26,13 @@
 		<mobility value="true" />
 
 		<!--If set to true, the chosen interference model is called at the end of every round to test for interferring packets. To increase performance, set this flag to FALSE if you do not consider interference.-->
-		<interference value="false" />
+		<interference value="true" />
 
 		<!--Set this flag to true if interference only decreases if fewer messages are being sent and increases if more messages are being sent. If this flag is NOT set, interference for all messages currently being sent is reevaluated whenever a new message is being sent, and whenever a message stops being sent. When this flag is set, interference tests are reduced to a minimum, using the additivity property. This flag only affects the asynchronous mode. In synchronous mode, interference is checked exactly once for every message in every round.-->
-		<interferenceIsAdditive value="false" />
+		<interferenceIsAdditive value="true" />
 
 		<!--Set this flag to true if a node can receive messages while it is sending messages itself, otherwise to false. This flag is only relevant if interference is turned on, and it must be handled properly in the used interference model.-->
-		<canReceiveWhileSending value="false" />
+		<canReceiveWhileSending value="true" />
 
 		<!--Set this flag to true if a node can receive multiple messages in parallel, otherwise to false. When set to false, concurrent packets are all dropped. This flag is only relevant if interference is turned on, and it must be handled properly in the used interference model.-->
 		<canReceiveMultiplePacketsInParallel value="true" />
@@ -44,7 +44,7 @@
 		<exitOnTerminationInGUI value="false" />
 
 		<!--If set true, in asynchronous mode the connections are initialized before the first event executes. Note that this flag is useless in synchronous mode as the connections are updated in every step anyway.-->
-		<initializeConnectionsOnStartup value="true" />
+		<initializeConnectionsOnStartup value="false" />
 
 		<!--Defines how often the GUI is updated. The GUI is redrawn after every refreshRate-th round.-->
 		<refreshRate value="1" />
@@ -137,19 +137,19 @@
 		<DefaultConnectivityModel value="UDG" />
 
 		<!--Default distribution model used when none is specified-->
-		<DefaultDistributionModel value="Grid2D" />
+		<DefaultDistributionModel value="Random" />
 
 		<!--Default interference model used when none is specified-->
 		<DefaultInterferenceModel value="NoInterference" />
 
 		<!--Default mobility model used when none is specified-->
-		<DefaultMobilityModel value="mobility2cooja:OfficeMobility" />
+		<DefaultMobilityModel value="NoMobility" />
 
 		<!--Default reliability model used when none is specified-->
 		<DefaultReliabilityModel value="ReliableDelivery" />
 
 		<!--Default node implementation used when none is specified-->
-		<DefaultNodeImplementation value="mobility2cooja:Mote" />
+		<DefaultNodeImplementation value="checkNodePos:DummyAntennaNode" />
 
 		<!--Show the models implemented by all projects in the drop down options. When set to false, only the models by the selected project and the default project are shown.-->
 		<showModelsOfAllProjects value="false" />
@@ -229,9 +229,9 @@
 	
 <Node defaultSize="10" />
 
-<GeometricNodeCollection rMax="100"/>
+<GeometricNodeCollection rMax="150"/>
 
-<UDG rMax="50"/>
+<UDG rMax="150"/>
 
 <SINR alpha="2" beta="0.7" noise="0"/>
 
@@ -240,17 +240,6 @@
 	<WaitingTime distribution="Poisson" lambda="10" />
 </RandomWayPoint>
 
-
-<OfficeMobility>
-	<Speed distribution="Constant" constant="4"/>
-	<PerMobNodes value="15"/>
-	<WaitingTime distribution="Constant" constant="300" />
-	<DistStops distribution="Uniform" min="1" max="3"/>
-	<!-- <DistStops distribution="Uniform" min="1" max="4"/> -->
-	<SkippedTimeFromStart value="1200"/>
-	<SinkPlacement value="CENTER"/>
-</OfficeMobility>
-
 <RandomDirection>
 	<NodeSpeed distribution="Gaussian" mean="10" variance="20" />
 	<WaitingTime distribution="Poisson" lambda="10" />
@@ -258,6 +247,6 @@
 </RandomDirection>
 
 <QUDG rMin="30" rMax="50" ProbabilityType="constant" connectionProbability="0.6"/>
-																											</Custom>
+									</Custom>
 </Document>
 
